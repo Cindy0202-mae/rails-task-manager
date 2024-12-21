@@ -13,5 +13,5 @@
       <%= f.label :completed, class: "form-check-label" %>
     </div>
     <% end %>
-    <%= f.submit "Create Task", class: "btn btn-primary" %>
+    <%= f.submit task.new_record? ? "Create Task" : "Update Task", class: "btn btn-primary" %>
   <% end %>

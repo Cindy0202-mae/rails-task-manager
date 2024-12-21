@@ -1,15 +1,15 @@
 <div class="container">
-  <h1><%= @task.title %></h1>
-  <div class= "col-4 mb-4">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"><%= @task.details %></h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            <%= check_box_tag 'completed', '1', @task.completed, disabled: true %>This task is <%= @task.completed ? 'completed' : 'not completed yet' %>
-          </h6>
-        </div>
-      </div>
+  <h1 class="my-4"><%= @task.title %></h1>
+  <div class= "row mb-4">
+    <div class="col-md-6">
+      <h5><%= @task.details %></h5>
+        <h6 class="text-muted">
+          <%= check_box_tag 'completed', '1', @task.completed, disabled: true %> &nbsp; This task is <%= @task.completed ? 'completed' : 'not completed yet' %>
+        </h6>
     </div>
-    <%= link_to "Back", tasks_path, class: "btn btn-secondary" %>
-    <%= link_to "Edit", edit_task_path(@task), class: "btn btn-primary" %>
+    </div>
+    <div class="mt-4">
+      <%= link_to "Back", tasks_path, class: "btn btn-secondary" %>
+      <%= link_to "Edit", edit_task_path(@task), class: "btn btn-primary" %>
+    </div>
 </div>
